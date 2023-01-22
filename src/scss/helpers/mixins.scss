@@ -1,0 +1,30 @@
+@mixin style-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin text($size, $height) {
+  font-family: $lato;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $main-weight;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin title {
+  font-family: $lato;
+  font-size: $title-size;
+  line-height: $title-height;
+  font-weight: $title-weight;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

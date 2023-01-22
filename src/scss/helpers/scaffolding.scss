@@ -1,0 +1,50 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Heebo";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/Lato-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Heebo";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/Lato-Semibold.ttf") format("ttf");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Heebo";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/Lato-Bold.ttf") format("ttf");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  @include text(14px, 20px);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  @include style-none();
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

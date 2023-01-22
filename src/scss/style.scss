@@ -1,5 +1,6 @@
-$red: red;
+@import "./assets/libs/normalize.min.css";
 
-h1 {
-  color: $red;
-}
+@import "helpers/visually-hidden";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/scaffolding";
