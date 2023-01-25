@@ -75,7 +75,7 @@ function serve() {
   })
 
   watch('src/**/*.html', series(html)).on('change', sync.reload);
-  watch('src/less/**/*.scss', series(compileSass)).on('change', sync.reload);
+  watch('src/scss/**/*.scss', series(compileSass)).on('change', sync.reload);
   watch('src/js/**/*.js', series(js)).on('change', sync.reload);
   watch('src/img/**/*.*', series(img)).on('all', sync.reload);
   watch('src/fonts/**/*.*', series(copyFonts)).on('all', sync.reload);
