@@ -1,0 +1,59 @@
+.contact {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: inherit;
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__info {
+    width: 45%;
+  }
+
+  &__title {
+    @include title();
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    @include text(14px, 20px);
+    color: $black;
+  }
+}
+
+.contact-form {
+  &_wrap {
+    width: 45%;
+  }
+
+  &__full-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__first-name,
+  &__last-name {
+    @include input();
+    width: 47%;
+  }
+
+  &__tel {
+    @include input();
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  &__question {
+    @include input();
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  &__submit {
+    @include button($white, $red, 20px 35px, $red, transparent);
+    border: 1px solid $red;
+  }
+}

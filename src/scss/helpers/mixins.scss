@@ -9,6 +9,7 @@
   font-size: $size;
   line-height: $height;
   font-weight: $main-weight;
+  font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -18,8 +19,49 @@
   font-size: $title-size;
   line-height: $title-height;
   font-weight: $title-weight;
+  color: $black;
+  font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@mixin small-title {
+  font-family: $lato;
+  font-size: $small-title-size;
+  line-height: $small-title-height;
+  font-weight: $small-title-weight;
+  color: $darkshade;
+  font-style: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin button($text-color, $background, $padding, $hover-color, $hover-background) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include text(14px, 17px);
+  color: $text-color;
+  background: $background;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border-style: none;
+  padding: $padding;
+  cursor: pointer;
+  transition: 300ms ease-out;
+
+  &:hover, &:focus {
+    color: $hover-color;
+    background: $hover-background;
+  }
+}
+
+@mixin input() {
+  border: 1px solid #333333;
+  border-radius: 6px;
+  padding: 20px 30px;
+  @include text(16px, 19px);
+  color: rgba(19, 39, 67, 0.5);
 }
 
 @mixin container {

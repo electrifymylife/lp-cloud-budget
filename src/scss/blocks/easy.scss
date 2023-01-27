@@ -1,0 +1,42 @@
+.easy {
+  padding: 95px 0;
+  background: inherit;
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+    width: 50%;
+  }
+
+  &__title {
+    @include title();
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    @include text(14px, 20px);
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    @include text(14px, 20px);
+    color: $red;
+    text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 400ms;
+
+    &:hover, &:focus {
+      text-decoration-color: $red;
+    }
+  }
+
+  &__img {
+    &_wrap {
+      width: 50%;
+      text-align: center;
+    }
+    width: 70%;
+  }
+}

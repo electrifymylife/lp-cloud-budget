@@ -1,0 +1,102 @@
+.footer {
+  padding: 85px 0;
+  background: $lightgray;
+
+  &_wrapper {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__copyright {
+    @include container();
+    @include text(12px, 14px);
+    color: $darkshade;
+    margin-top: 85px;
+  }
+}
+
+.address {
+  &__title {
+    @include small-title();
+    margin-bottom: 35px;
+  }
+  &__text {
+    @include text(12px, 18px);
+    color: $darkshade;
+  }
+}
+
+.services {
+  &__title {
+    @include small-title();
+    margin-bottom: 35px;
+  }
+  &__link {
+    @include text(12px, 18px);
+    color: $darkshade;
+    text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 400ms;
+
+    &:hover, &:focus {
+      text-decoration-color: $darkshade;
+    }
+  }
+}
+
+.contacts {
+  &__title {
+    @include small-title();
+    margin-bottom: 35px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    @include text(12px, 14px);
+    color: $darkshade;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  &__item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.2;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      animation: fadeIn 1s ease-in 0.5ms alternate;
+    }
+  }
+}
+
+.partners {
+  &__title {
+    @include small-title();
+    margin-bottom: 35px;
+  }
+}

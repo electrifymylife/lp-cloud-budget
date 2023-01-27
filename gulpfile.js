@@ -37,7 +37,7 @@ function compileSass() {
 function js() {
   return src('src/js/*.js')
     .pipe(uglify())
-    .pipe(dest('dist/js'))
+    .pipe(dest('dist/assets/js'))
 }
 
 function img() {

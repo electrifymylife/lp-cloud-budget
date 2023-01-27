@@ -1,0 +1,62 @@
+.focus {
+  padding: 95px 0;
+  background: $red;
+
+  &_wrapper {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    width: 50%;
+  }
+
+  &__title {
+    @include title();
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @include text(14px, 20px);
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    &_wrap {
+      width: 50%;
+      text-align: center;
+    }
+    width: 70%;
+  }
+}
+
+.download {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.2;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      animation: fadeIn 1s ease-in 0.5ms alternate;
+    }
+  }
+}

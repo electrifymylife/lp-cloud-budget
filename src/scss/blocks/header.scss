@@ -1,0 +1,36 @@
+.top-header {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+
+  &__login {
+    @include button($white, transparent, 10px 30px, $red, $white);
+    border: 1px solid $white;
+  }
+}
+
+.navigation {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    @include text(14px, 17px);
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 400ms;
+
+    &:hover, &:focus {
+      text-decoration-color: $white;
+    }
+
+    &:first-child {
+      font-weight: 700;
+    }
+  }
+}
