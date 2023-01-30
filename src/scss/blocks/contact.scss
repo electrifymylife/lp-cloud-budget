@@ -7,8 +7,21 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @media (max-width: $mobile-bp) {
+    flex-direction: column;
+  }
+
   &__info {
     width: 45%;
+
+    @media (max-width: $tablet-bp) {
+      width: 40%;
+    }
+
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -25,6 +38,14 @@
 .contact-form {
   &_wrap {
     width: 45%;
+
+    @media (max-width: $tablet-bp) {
+      width: 55%;
+    }
+
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+    }
   }
 
   &__full-name {
@@ -38,6 +59,10 @@
   &__last-name {
     @include input();
     width: 47%;
+
+    @media (max-width: 380px) {
+      width: 49%;
+    }
   }
 
   &__tel {

@@ -14,6 +14,10 @@
     align-items: center;
     text-align: center;
     height: 80vh;
+
+    @media (max-width: 380px) {
+      height: 90vh;
+    }
   }
 
   &__title {
@@ -26,6 +30,15 @@
     color: $white;
     margin-top: 0;
     margin-bottom: 40px;
+
+    @media (max-width: $mobile-bp) {
+      font-size: 35px;
+      line-height: 36px;
+    }
+
+    @media (max-width: 380px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -33,6 +46,14 @@
     font-weight: 600;
     color: $white;
     margin-bottom: 40px;
+
+    @media (max-width: $mobile-bp) {
+      width: 80%;
+    }
+
+    @media (max-width: 380px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__signup {

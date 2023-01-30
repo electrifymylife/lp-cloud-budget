@@ -15,6 +15,10 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
+    @media (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -25,6 +29,15 @@
     margin-top: 43px;
     position: relative;
     counter-increment: inst;
+
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &::before {
       position: absolute;

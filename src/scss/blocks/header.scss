@@ -5,6 +5,26 @@
   align-items: center;
   padding-top: 60px;
 
+  @media (max-width: $tablet-bp) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: $mobile-bp) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__logo {
+    @media (max-width: $tablet-bp) {
+      padding-left: 50px;
+    }
+
+    @media (max-width: $mobile-bp) {
+      padding-left: 0;
+      padding-bottom: 23px;
+    }
+  }
+
   &__login {
     @include button($white, transparent, 10px 30px, $red, $white);
     border: 1px solid $white;
@@ -17,6 +37,19 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: $tablet-bp) {
+    display: none;
+    position: absolute;
+    top: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    order: -1;
+  }
+
+  @media (max-width: $mobile-bp) {
+    align-self: flex-start;
+  }
 
   &__item {
     @include text(14px, 17px);
@@ -31,6 +64,84 @@
 
     &:first-child {
       font-weight: 700;
+    }
+
+    @media (max-width: $tablet-bp) {
+      margin-bottom: 7px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.toggle {
+  display: none;
+
+  @media (max-width: $tablet-bp) {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+
+    top: 20px;
+    left: 0;
+
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.closed {
+  display: none;
+
+  @media (max-width: $tablet-bp) {
+    display: block;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 20px;
+      right: 15px;
+
+      width: 30px;
+      height: 1.6px;
+
+      background-color: $white;
+      box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+
+      transition: all .3s ease-out;
+    }
+  }
+}
+
+.opened {
+  @media (max-width: $tablet-bp) {
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 30px;
+      left: 15px;
+
+      width: 30px;
+      height: 1.6px;
+
+      background-color: $white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      transition: all .3s ease-in;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      transition: all .3s ease-in;
     }
   }
 }

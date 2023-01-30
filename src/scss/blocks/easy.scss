@@ -6,13 +6,26 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: $mobile-bp) {
+    flex-direction: column;
+  }
+
   &__info {
     width: 50%;
+
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
     @include title();
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-bp) {
+
+    }
   }
 
   &__text {
@@ -36,6 +49,10 @@
     &_wrap {
       width: 50%;
       text-align: center;
+
+      @media (max-width: $mobile-bp) {
+        width: 100%;
+      }
     }
     width: 70%;
   }

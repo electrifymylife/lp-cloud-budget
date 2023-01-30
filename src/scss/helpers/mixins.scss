@@ -23,6 +23,12 @@
   font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (max-width: $mobile-bp) {
+    font-size: calc($title-size - 50%);
+    line-height: calc($title-height - 20%);
+    margin-bottom: 10%;
+  }
 }
 
 @mixin small-title {
@@ -61,7 +67,10 @@
   border-radius: 6px;
   padding: 20px 30px;
   @include text(16px, 19px);
-  color: rgba(19, 39, 67, 0.5);
+  color: $black;
+  &::placeholder {
+    color: rgba(19, 39, 67, 0.5);
+  }
 }
 
 @mixin container {

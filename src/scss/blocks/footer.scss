@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
   }
 
   &__copyright {
@@ -18,9 +22,17 @@
 }
 
 .address {
+  @media (max-width: $mobile-bp) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     @include small-title();
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     @include text(12px, 18px);
@@ -29,9 +41,17 @@
 }
 
 .services {
+  @media (max-width: $mobile-bp) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     @include small-title();
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
   }
   &__link {
     @include text(12px, 18px);
@@ -46,9 +66,17 @@
 }
 
 .contacts {
+  @media (max-width: $mobile-bp) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     @include small-title();
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -95,8 +123,16 @@
 }
 
 .partners {
+  @media (max-width: $mobile-bp) {
+    margin-bottom: 20px;
+  }
+
   &__title {
     @include small-title();
     margin-bottom: 35px;
+
+    @media (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
   }
 }

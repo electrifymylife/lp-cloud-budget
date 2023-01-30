@@ -7,10 +7,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
   }
 
   &__info {
     width: 50%;
+
+    @media (max-width: $mobile-bp) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -29,6 +38,10 @@
     &_wrap {
       width: 50%;
       text-align: center;
+
+      @media (max-width: $mobile-bp) {
+        width: 100%;
+      }
     }
     width: 70%;
   }
@@ -38,6 +51,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: $mobile-bp) {
+    justify-content: center;
+  }
 
   &__item {
     margin-right: 30px;
