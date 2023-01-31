@@ -5,7 +5,7 @@ const minify = require('gulp-htmlmin')
 const sass = require('gulp-sass')(require("sass"))
 const csso = require('gulp-csso')
 const autoprefixer = require('gulp-autoprefixer')
-//const uglify = require('gulp-uglify')
+const terser = require('gulp-terser')
 const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const concat = require('gulp-concat')
@@ -36,7 +36,7 @@ function compileSass() {
 
 function js() {
   return src('src/js/*.js')
-    //.pipe(uglify())
+    .pipe(terser())
     .pipe(dest('dist/assets/js'))
 }
 
