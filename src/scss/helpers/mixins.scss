@@ -26,8 +26,8 @@
 
   @media (max-width: $mobile-bp) {
     font-size: calc($title-size - 50%);
-    line-height: calc($title-height - 20%);
-    margin-bottom: 10%;
+    line-height: 120%;
+    margin-bottom: 20px;
   }
 }
 
